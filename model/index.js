@@ -1,7 +1,14 @@
-// const fs = require('fs/promises')
-// const contacts = require('./contacts.json')
+const path = require('path')
+const fs = require('fs/promises')
+const contacts = require('./contacts.json')
 
-const listContacts = async () => {}
+const listContacts = async () => {
+  const pathContacts = path.join(__dirname, '/')
+  try {
+  } catch (err) {
+    console.log('error', err)
+  }
+}
 
 const getContactById = async (contactId) => {}
 
@@ -18,3 +25,4 @@ module.exports = {
   addContact,
   updateContact,
 }
+listContacts()
