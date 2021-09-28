@@ -4,6 +4,8 @@ const {
   listContacts,
   getContactById,
   addContact,
+  removeContact,
+  updateContact,
 } = require("../../contactsController.js");
 
 router.get("/", listContacts);
@@ -12,12 +14,8 @@ router.get("/:contactId", getContactById);
 
 router.post("/", addContact);
 
-router.delete("/:contactId", async (req, res, next) => {
-  res.json({ message: "template message" });
-});
+router.delete("/:contactId", removeContact);
 
-router.patch("/:contactId", async (req, res, next) => {
-  res.json({ message: "template message" });
-});
+router.patch("/:contactId", updateContact);
 
 module.exports = router;

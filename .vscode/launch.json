@@ -4,12 +4,12 @@
   // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-    {
-      "command": "npm run start:dev",
-      "name": "Run-npm-start",
-      "request": "launch",
-      "type": "node-terminal"
-    },
+    // {
+    //   "command": "npm run start:dev",
+    //   "name": "Run-npm-start",
+    //   "request": "launch",
+    //   "type": "node-terminal"
+    // },
     {
       "type": "pwa-node",
       "request": "launch",
