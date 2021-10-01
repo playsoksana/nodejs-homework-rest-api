@@ -42,7 +42,6 @@ const updateContact = async (contactId, body) => {
   const index = contacts.findIndex(({ id }) => id === contactId);
   if (index !== -1) {
     contacts[index] = { ...contacts[index], ...body };
-    console.log(contacts[index]);
     await db.writeFile(contacts);
     return contacts[index];
   }
