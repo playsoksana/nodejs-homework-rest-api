@@ -1,5 +1,5 @@
 const { v4: uuidv4 } = require("uuid");
-const DB = require("./db");
+const DB = require("./db.js");
 const db = new DB("./contacts.json");
 
 const listContacts = async () => {

@@ -4,7 +4,7 @@ const {
   getContactById,
   removeContact,
   updateContact,
-} = require("../../model/index.js");
+} = require("../model/index.js");
 
 const getContacts = async (_req, res, next) => {
   try {

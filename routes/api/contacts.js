@@ -1,7 +1,7 @@
 const express = require("express");
 // const { required } = require("joi");
 const router = express.Router();
-const { updateContact } = require("../../../model/index.js");
+const { updateContact } = require("../../model/index.js");
 
 const {
   getContacts,
