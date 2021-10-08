@@ -1,7 +1,5 @@
 const express = require("express");
-// const { required } = require("joi");
 const router = express.Router();
-const { updateContact } = require("../../model/index.js");
 
 const {
   getContacts,
@@ -9,9 +7,10 @@ const {
   getContact,
   deleteContactById,
   putContact,
-} = require("../../controllers/controllersContacts.js");
+  updatePartContact,
+} = require("../../controllers/controllersContacts");
 
-const { validateContacts } = require("./validation.js");
+const { validateContacts, validateId } = require("./validation.js");
 
 router.get("/", getContacts);
 
@@ -22,5 +21,7 @@ router.post("/", validateContacts, postContact);
 router.delete("/:contactId", deleteContactById);
 
 router.put("/:contactId", validateContacts, putContact);
+
+router.patch("/:id/favorite/", validateId, updatePartContact);
 
 module.exports = router;
