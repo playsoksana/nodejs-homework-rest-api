@@ -3,7 +3,6 @@ const gravatar = require("gravatar");
 
 const { Subscription } = require("../config/constants");
 const bcrypt = require("bcryptjs");
-const { v4: uuidv4 } = require('uuid');
 const SALT_FACTOR = 6;
 
 const userSchema = new Schema(
@@ -33,12 +32,6 @@ const userSchema = new Schema(
       },
     },
     idUserCloud: { type: String, default: null },
-      isVerified: { type: Boolean, default: false },
-    verifyToken: {
-      type: String,
-      required: true,
-      default: uuidv4(),
-    },
   },
   {
     versionKey: false,
